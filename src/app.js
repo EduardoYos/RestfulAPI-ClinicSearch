@@ -106,7 +106,6 @@ function searchClinics(name, state, from, to){
             stateName = Object.keys(statesDict).find(key => statesDict[key] === state);
             stateAbbr = state;
         }
-        console.log(stateName);
         filteredClinics = filteredClinics.filter(c => (c.stateName != undefined && c.stateName == stateName)
          || (c.stateCode != undefined && c.stateCode === stateAbbr));
     }

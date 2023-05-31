@@ -130,13 +130,6 @@ app.get(baseUrl, (req,res) => {
     res.send("Aplication start");
 });
 
-// get all clinics
-app.get(baseUrl + "/all-clinics", (req, res) => {
-
-    let clinicsData = dentalData.concat(vetData);
-    res.status(200).send(clinicsData);
-});
-
 app.get(baseUrl + "/clinic", (req, res) => {
 
     queryData = req.query;

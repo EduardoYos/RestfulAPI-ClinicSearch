@@ -21,12 +21,14 @@ Where localhost is the machine's local address and 3000 is the server port.
 ### **Evaluation metrics**
 
  Simple, clear, readable code
-	- As it is a small application, there was no need to create other files besides the main one. The code was separated into regions, making it easier to understand.
+	- As it is a small application, only the main class and the server were created. If the application were larger, controllers and other classes could be created to organize the code structure. In addition, the code was separated into regions, making it easier to understand.
 - Correctness
 	- The application performs the search operations correctly. The treatment of the case where the user can type the name of the entire state or just its abbreviation was treated. The case in which the clinic has a name with more than one word was also treated. Improvements could be made to handle cases where the search is not done using the parameters correctly or there are errors in the HTTP responses.
 - Security 
 	- As it is a basic application, no treatments were made regarding the vulnerability of the application.
 - Memory efficiency
 	- For large datasets, a database could be used to manage and store the information, since the implementation was done by storing the data in memory.
+- Testing 
+	- The test suite was created containing a basic test.
 - Documentation
 	- The code has been organized and can be understood by without requiring additional documentation.

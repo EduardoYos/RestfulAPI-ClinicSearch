@@ -119,18 +119,16 @@ function searchClinics(name, state, from, to){
     return filteredClinics;
 }
 
-let port=process.env.PORT || 3000;
 var baseUrl = "/api";
 
 //#region GET routes
 
 //start
 app.get(baseUrl, (req,res) => {
-    res.send("Aplication start");
+    res.send("Application start");
 });
 
 app.get(baseUrl + "/clinic", (req, res) => {
-
     queryData = req.query;
     var clinics = searchClinics(queryData.name, queryData.state, queryData.from, queryData.to);
     res.status(200).send(clinics);
@@ -144,9 +142,5 @@ app.get(baseUrl + "/clinic", (req, res) => {
 getDentalData(); //stored in dentalData
 getVetData(); //stored in vetData
 
-//Start server
-app.listen(port,function(req,res){
-    console.log('Server is running!');
- });
-
  //#endregion
+ module.exports = app;
